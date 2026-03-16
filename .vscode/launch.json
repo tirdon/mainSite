@@ -19,6 +19,46 @@
             "target": "mainSite",
             "configuration": "release",
             "preLaunchTask": "swift: Build Release mainSite"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:mainSite}",
+            "name": "Debug Server",
+            "target": "Server",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug Server"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:mainSite}",
+            "name": "Release Server",
+            "target": "Server",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release Server"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:mainSite}",
+            "name": "Debug Client",
+            "target": "Client",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug Client"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:mainSite}",
+            "name": "Release Client",
+            "target": "Client",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release Client"
         }
     ]
 }
