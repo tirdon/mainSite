@@ -2,6 +2,7 @@
 // https://docs.swift.org/swift-book
 
 import Hummingbird
+import Logging
 
 @main
 struct Server {
@@ -13,10 +14,12 @@ struct Server {
             FileMiddleware("Sources/Client/public", searchForIndexHtml: true)
         }
 
+        let port = Int(Environment().get("PORT") ?? "8080") ?? 8080
+
         // create application using router
         let app = Application(
             router: router,
-            configuration: .init(address: .hostname("0.0.0.0", port: 8080))
+            configuration: .init(address: .hostname("0.0.0.0", port: port))
         )
         // run hummingbird application
         try await app.runService()
